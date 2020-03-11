@@ -1,0 +1,219 @@
+import { Head, Steps, Split, themes } from "mdx-deck";
+import { Box } from "theme-ui";
+
+
+export const theme = {
+  ...themes.highlight
+}
+
+<Head>
+  <title>Creating A Design System</title>
+</Head>
+
+# Creating A Design System
+
+---
+
+# A.K.A Sales Pitch For Chromatic
+
+[Design Systems For Developers](https://www.learnstorybook.com/design-systems-for-developers/react/en/introduction/)
+
+---
+
+<Box style={{width:'80vw'}}>
+  <img src="https://www.learnstorybook.com/design-systems-for-developers/design-system-context.jpg" />
+</Box>
+
+---
+
+## Parts
+
+- Design Tokens
+- Base Components
+- Layout Components
+- Documentation Around Usage and Voice/Tone
+
+---
+
+## But First...A Little History
+
+<Steps>
+  <iframe
+    src="https://giphy.com/embed/3P0oEX5oTmrkY"
+    width="444"
+    height="480"
+    frameBorder="0"
+    class="giphy-embed"
+    allowFullScreen
+  ></iframe>
+</Steps>
+
+---
+
+## HTML/CSS/JS Triumverite
+
+- Pages made in Dreamweaver
+- Styling placed inline in `style` tags
+- JS included in `onClick="callable()"`
+
+---
+
+## One-liner
+
+<button style={{padding: '10px', fontSize: '18px'}}
+        onClick={function(e) { e.preventDefault(); alert('PWNED!!!'); }}>
+  Nigerian Phishing Scam
+</button>
+
+```HTML
+<button style="padding: 10px;font-size: 18px;"
+        onclick="() => alert('PWNED!!!')}">
+  Nigerian Phishing Scam
+</button>
+```
+
+---
+
+## A Bit Separated
+
+<button style={{padding: '10px', fontSize: '18px'}}
+        onClick={function(e) { e.preventDefault(); alert('PWNED!!!'); }}>
+  Nigerian Phishing Scam
+</button>
+
+```HTML
+<style>
+  .this-button {
+    padding: 10px;
+    font-size: 18px;
+  }
+</style>
+<button class="this-button" onclick="scam()"}>
+  Nigerian Phishing Scam
+</button>
+<script>
+function scam() {
+  alert('PWNED!!!');
+}
+</script>
+```
+
+---
+
+## Separation of Concerns
+
+- Effort to reuse CSS/JS/HTML
+- Makes the code look "pretty"
+- "Unobtrusive JavaScript"
+- Feel more like a backend, "offical" developer
+
+---
+
+## Global Styling/Current Giving Site
+
+- CSS is added to the page in the `<head>`
+- Commonly more styling is added than the current page needs
+- Drupal has regions and blocks that map to components but styling is still global
+- Drupal does aggregate CSS and only adds it for some pages but...
+
+---
+
+## To SASSy For My Tastes
+
+<img style={{width:'70vw'}} src="https://user-images.githubusercontent.com/3640707/76429561-99c75880-6385-11ea-9f46-0fd3fa2653e5.png" />
+
+---
+
+## Component-driven Development
+
+- Common to use Atomic Design: atoms, molecules, organisms, templates, and pages
+- The UI is broken down into semantically-related segments
+- Each segment is further broken down until you get to the atoms 
+
+---
+
+## What Is A Component?
+
+<Split>
+
+<img style={{width:'40vw'}} src="https://reactjs.org/static/thinking-in-react-components-eb8bda25806a89ebdc838813bdfa3601-82965.png" />
+
+### Product Search
+
+- Break down UI into sub-components
+- Use the "Single Responsibility Principle"
+- Search box searches for products
+- Product list displays products based on search results
+- React says "You’ll see here that we have five components in our app."
+- [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+
+</Split>
+
+---
+
+## A Lot of Frontend Choices...
+
+<img style={{width:'80vw'}} src="https://www.learnstorybook.com/design-systems-for-developers/design-system-context.jpg" />
+
+
+---
+
+## Back Together Again!
+
+<iframe src="https://giphy.com/embed/tFDWhOyUlTaw0" width="480" height="220" frameBorder="0" class="giphy-embed"></iframe>
+
+---
+
+## Vue Single File Component
+
+<img style={{width:'75vw'}} src="https://user-images.githubusercontent.com/3640707/76468495-74a50b00-63c2-11ea-8da9-34e217697f5e.png" />
+
+---
+
+## Workflows: Designer <=> Developer
+
+<Steps>
+ <iframe src="https://giphy.com/embed/9LQHvkbIzTSLe" width="480" height="480" frameBorder="0" class="giphy-embed"></iframe>
+</Steps>
+
+---
+
+## Mirroring Design
+
+<img style={{width:'75vw'}} src="https://user-images.githubusercontent.com/3640707/76435390-5375f780-638d-11ea-8807-b4a960171414.png" />
+
+[Working with components in XD](https://helpx.adobe.com/xd/help/components.html)
+
+---
+
+## Mirroring Design
+
+- Each component in the Storybook component library marches a component in the design tool
+- Exception being layout/container components
+- Working up from atoms to molecules to organisms should easily show where mirroring stops making sense
+
+---
+
+# Where To Go From Here?
+
+<Steps>
+  <iframe src="https://giphy.com/embed/vcjUTOKwx5YQg" width="477" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</Steps>
+
+---
+
+## Design Token Variable Creation
+
+---
+
+## Component Cataloguing
+
+---
+
+## Component Cutout Workshop
+
+---
+
+# Storybook Demo Time
+
+<iframe src="https://giphy.com/embed/r7ov3YWAqSojm" width="480" height="199" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
