@@ -128,7 +128,7 @@ function scam() {
 - Effort to reuse CSS/JS/HTML
 - Makes the code look "pretty"
 - "Unobtrusive JavaScript"
-- Feel more like a backend, "offical" developer
+- Feel more like a backend, "official" developer
 
 ---
 
@@ -214,6 +214,18 @@ function scam() {
 - Each component in the Storybook component library marches a component in the design tool
 - Exception being layout/container components
 - Working up from atoms to molecules to organisms should easily show where mirroring stops making sense
+
+---
+
+## Deployment
+
+- Previews created on each merge request for manual review
+- Tests run before previews are created and can include visual regression testing
+- Once approved, component library ups version and pushes to node package manager
+- Any apps consuming the library update their dependencies and get new changes
+
+
+<img style={{width:'70vw'}} src="https://user-images.githubusercontent.com/3640707/76528548-5d5c3100-6447-11ea-9d2e-884f445e1958.png" />
 
 ---
 
