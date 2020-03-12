@@ -1,8 +1,31 @@
 import { Head, Steps, Split, themes } from "mdx-deck";
 import { Box } from "theme-ui";
 
-
 export const theme = {
+  styles: {
+    h1: {
+      textTransform: 'uppercase',
+      letterSpacing: '0.1em',
+    },
+    blockquote: {
+      fontStyle: 'italic',
+      maxWidth: '70vw',
+    },
+    ul: {
+      maxWidth: '70vw',
+    },
+    li: {
+      textAlign: 'start',
+      marginBottom: '0.75rem'
+    },
+    // h2: {
+    //   position: 'absolute',
+    //   top: '20px',
+    // },
+    code: {
+      fontSize: '22px',
+    },
+  },
   ...themes.highlight
 }
 
@@ -204,13 +227,58 @@ function scam() {
 
 ## Design Token Variable Creation
 
+<img style={{width:'43vw'}} src="https://user-images.githubusercontent.com/3640707/76479834-6c10fc80-63e3-11ea-82f1-765f11c477fd.png" />
+<figcaption>Options</figcaption>
+<img style={{width:'53vw'}} src="https://user-images.githubusercontent.com/3640707/76479832-6b786600-63e3-11ea-84d6-d70d8f9136c2.png" />
+<figcaption>Decisions</figcaption>
+
+---
+
+> Before, we decided on $color-neutral-80 for a border or background with a bit of whimsy. Now, we’re applying $border-hairline or a $background-color-light in a thoughtful, conventional manner.
+
+[Tokens In Design Systems](https://medium.com/eightshapes-llc/tokens-in-design-systems-25dd82d58421)
+
+---
+
+## Tokens
+
+- **Icons -** Put all the icons you're using in one place
+- **Global -** This is the "CSS Reset" style that goes on the `<\body>` tag in order to standardize browser's default styling.
+- **Typography -** Font family, weight, and sizes.
+- **Colors -** Primary, secondary, accent colors as well as contrasts with backgrounds.
+- **Breakpoints -** Traditionally, screen sizes of different devices, but you can also use math, proportions, and ratios
+- **Spacing -** Rather than end up with spacing individual elements, use "small, medium, large" etc to reference actual CSS units of spacing.
+- **Animations -** Common animations.
+
 ---
 
 ## Component Cataloguing
 
+<img style={{width:'70vw'}} src="https://bradfrost.com/wp-content/uploads/2013/07/pnc-buttons.jpg" />
+
+---
+
+## Gradients, Arrows, Borders, Oh My!
+
+<img style={{width:'60vw'}} src="https://bradfrost.com/wp-content/uploads/2013/07/pnc-buttons-2.jpg" />
+
+---
+
+## Cleaner Buttons
+
+<img style={{width:'60vw'}} src="https://bradfrost.com/wp-content/uploads/2013/07/etsy-buttons.jpg" />
+
 ---
 
 ## Component Cutout Workshop
+
+<img style={{width:'75vw'}} src="https://miro.medium.com/max/6012/1*2DitJqVLBKd_663vQw8HYQ.png" />
+
+---
+
+## Component Cutout Workshop
+
+<img style={{width:'75vw'}} src="https://miro.medium.com/max/6012/1*dlno0yVyeh5MFgrUaAvfGw.png" />
 
 ---
 
